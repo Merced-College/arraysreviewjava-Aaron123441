@@ -49,7 +49,7 @@ public class BlackJack {
             System.out.println(DECK[i] + " ");
         }
     }
-
+//This ranks cards
     private static int dealInitialPlayerCards() {
         int card1 = dealCard();
         int card2 = dealCard();
@@ -63,7 +63,7 @@ public class BlackJack {
         System.out.println("Dealer's card: " + RANKS[card1] + " of " + SUITS[DECK[currentCardIndex] % 4]);
         return cardValue(card1);
     }
-
+//This plays the move Stand or Hit
     private static int playerTurn(Scanner scanner, int playerTotal) {
         while (true) {
             System.out.println("Your total is " + playerTotal + ". Do you want to hit or stand?");
