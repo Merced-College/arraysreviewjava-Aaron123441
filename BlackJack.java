@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class BlackJack {
 
+    
+    //This sets up the deck of cards
     private static final String[] SUITS = { "Hearts", "Diamonds", "Clubs", "Spades" };
     private static final String[] RANKS = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King",
             "Ace" };
@@ -16,7 +18,7 @@ public class BlackJack {
 
         initializeDeck();
         shuffleDeck();
-
+//Deals hand to player 
         int playerTotal = dealInitialPlayerCards();
         int dealerTotal = dealInitialDealerCards();
 
@@ -51,7 +53,7 @@ public class BlackJack {
             System.out.println(DECK[i] + " ");
         }
     }
-
+//This ranks cards
     private static int dealInitialPlayerCards() {
         int card1 = dealCard();
         int card2 = dealCard();
@@ -65,7 +67,7 @@ public class BlackJack {
         System.out.println("Dealer's card: " + RANKS[card1] + " of " + SUITS[DECK[currentCardIndex] % 4]);
         return cardValue(card1);
     }
-
+//This plays the move Stand or Hit
     private static int playerTurn(Scanner scanner, int playerTotal) {
         while (true) {
             System.out.println("Your total is " + playerTotal + ". Do you want to hit or stand?");
