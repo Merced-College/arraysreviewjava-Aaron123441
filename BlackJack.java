@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class BlackJack {
-
+//This sets up the deck of cards
     private static final String[] SUITS = { "Hearts", "Diamonds", "Clubs", "Spades" };
     private static final String[] RANKS = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King",
             "Ace" };
@@ -14,7 +14,7 @@ public class BlackJack {
 
         initializeDeck();
         shuffleDeck();
-
+//Deals hand to player 
         int playerTotal = dealInitialPlayerCards();
         int dealerTotal = dealInitialDealerCards();
 
